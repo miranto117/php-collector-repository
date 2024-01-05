@@ -7,7 +7,7 @@ class Autoloader{
     }
 
     public static function autoload($class){
-        require __DIR__ .'/'. $class .'.php';
+        require __DIR__ . '/' . $class .'.php';
     }
 
 }
