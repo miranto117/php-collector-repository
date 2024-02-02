@@ -1,0 +1,10 @@
+Classe sans double instanciation
+
+Technique: 
+- Mettre le constructeur de la classe en privé ou en protégé
+
+- Créer l'instance à l'interieur d'elle même 
+
+- Créer un attribut statique et mettre l'instance à l'interieur (Renvoye cette instance)
+
+- 

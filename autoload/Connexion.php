@@ -2,15 +2,22 @@
 
 class Connexion {
 
-    private $hote, $user, $pwd, $db;
+    private $hote = "hote";
+    private $user = "user";
+    private $pwd = "pwd";
+    private $db= "db";
 
-    public function __construct ($hote, $user, $pwd, $db) {
-        $this->hote = $hote;
-        $this->user = $user;
-        $this->pwd = $pwd;
-        $this->db = $db;
+    private static $_connexion;
 
-        $this->connectDB();
+    private function __construct () {
+        
+    }
+
+    public static function getConnect (){
+        if (!isset($_connexion))
+        self::$_connexion = new self;
+
+        return self::$_connexion;
     }
 
     public function connectDB() {
@@ -20,5 +27,5 @@ class Connexion {
     public function __sleep() {
         return array('var3', 'var2','var1');
     }
-
+ 
 }
